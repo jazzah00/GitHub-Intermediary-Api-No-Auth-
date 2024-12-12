@@ -1,0 +1,31 @@
+﻿[*.cs]
+
+# SYSLIB1045: Convert to 'GeneratedRegexAttribute'.
+dotnet_diagnostic.SYSLIB1045.severity = none
+
+# IDE0063: Use simple 'using' statement
+dotnet_diagnostic.IDE0063.severity = none
+
+# IDE0011: Add braces
+dotnet_diagnostic.IDE0011.severity = none
+
+# CS8604: Possible null reference argument.
+dotnet_diagnostic.CS8604.severity = none
+
+# CS8603: Possible null reference return.
+dotnet_diagnostic.CS8603.severity = none
+
+# IDE0059: Unnecessary assignment of a value
+dotnet_diagnostic.IDE0059.severity = none
+
+# CS8600: Converting null literal or possible null value to non-nullable type.
+dotnet_diagnostic.CS8600.severity = none
+
+# IDE0058: Expression value is never used
+dotnet_diagnostic.IDE0058.severity = none
+
+# IDE0320: Make anonymous function static
+dotnet_diagnostic.IDE0320.severity = none
+
+# CA1861: Avoid constant arrays as arguments
+dotnet_diagnostic.CA1861.severity = none

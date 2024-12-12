@@ -1,0 +1,6 @@
+@GitHub_Intermediary_Api__No_Auth__HostAddress = http://localhost:5224
+
+GET {{GitHub_Intermediary_Api__No_Auth__HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
