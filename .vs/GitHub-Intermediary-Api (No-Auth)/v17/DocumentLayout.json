@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\Development\\_Technical Assessments\\GitHub-Intermediary-Api (No-Auth)\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3C5BB43A-C7AE-4BB1-95A5-C5E9E46CE55D}|GitHub-Intermediary-Api (No-Auth)\\GitHub-Intermediary-Api (No-Auth).csproj|d:\\development\\_technical assessments\\github-intermediary-api (no-auth)\\github-intermediary-api (no-auth)\\framework\\apiconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C5BB43A-C7AE-4BB1-95A5-C5E9E46CE55D}|GitHub-Intermediary-Api (No-Auth)\\GitHub-Intermediary-Api (No-Auth).csproj|solutionrelative:github-intermediary-api (no-auth)\\framework\\apiconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3C5BB43A-C7AE-4BB1-95A5-C5E9E46CE55D}|GitHub-Intermediary-Api (No-Auth)\\GitHub-Intermediary-Api (No-Auth).csproj|d:\\development\\_technical assessments\\github-intermediary-api (no-auth)\\github-intermediary-api (no-auth)\\framework\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C5BB43A-C7AE-4BB1-95A5-C5E9E46CE55D}|GitHub-Intermediary-Api (No-Auth)\\GitHub-Intermediary-Api (No-Auth).csproj|solutionrelative:github-intermediary-api (no-auth)\\framework\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C5BB43A-C7AE-4BB1-95A5-C5E9E46CE55D}|GitHub-Intermediary-Api (No-Auth)\\GitHub-Intermediary-Api (No-Auth).csproj|d:\\development\\_technical assessments\\github-intermediary-api (no-auth)\\github-intermediary-api (no-auth)\\controllers\\githubcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C5BB43A-C7AE-4BB1-95A5-C5E9E46CE55D}|GitHub-Intermediary-Api (No-Auth)\\GitHub-Intermediary-Api (No-Auth).csproj|solutionrelative:github-intermediary-api (no-auth)\\controllers\\githubcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D5EF8D9B-777D-4FAA-818E-2E2E0834901A}|GitHub-Intermediary-Api (No-Auth) xTest\\GitHub-Intermediary-Api (No-Auth) xTest.csproj|d:\\development\\_technical assessments\\github-intermediary-api (no-auth)\\github-intermediary-api (no-auth) xtest\\githubcontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D5EF8D9B-777D-4FAA-818E-2E2E0834901A}|GitHub-Intermediary-Api (No-Auth) xTest\\GitHub-Intermediary-Api (No-Auth) xTest.csproj|solutionrelative:github-intermediary-api (no-auth) xtest\\githubcontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3C5BB43A-C7AE-4BB1-95A5-C5E9E46CE55D}|GitHub-Intermediary-Api (No-Auth)\\GitHub-Intermediary-Api (No-Auth).csproj|d:\\development\\_technical assessments\\github-intermediary-api (no-auth)\\github-intermediary-api (no-auth)\\framework\\converter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C5BB43A-C7AE-4BB1-95A5-C5E9E46CE55D}|GitHub-Intermediary-Api (No-Auth)\\GitHub-Intermediary-Api (No-Auth).csproj|solutionrelative:github-intermediary-api (no-auth)\\framework\\converter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C5BB43A-C7AE-4BB1-95A5-C5E9E46CE55D}|GitHub-Intermediary-Api (No-Auth)\\GitHub-Intermediary-Api (No-Auth).csproj|d:\\development\\_technical assessments\\github-intermediary-api (no-auth)\\github-intermediary-api (no-auth)\\framework\\apiconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C5BB43A-C7AE-4BB1-95A5-C5E9E46CE55D}|GitHub-Intermediary-Api (No-Auth)\\GitHub-Intermediary-Api (No-Auth).csproj|solutionrelative:github-intermediary-api (no-auth)\\framework\\apiconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C5BB43A-C7AE-4BB1-95A5-C5E9E46CE55D}|GitHub-Intermediary-Api (No-Auth)\\GitHub-Intermediary-Api (No-Auth).csproj|d:\\development\\_technical assessments\\github-intermediary-api (no-auth)\\github-intermediary-api (no-auth)\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,11 +34,11 @@
       "DocumentGroups": [
         {
           "DockedHeight": 215,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Development\\_Technical Assessments\\GitHub-Intermediary-Api (No-Auth)\\GitHub-Intermediary-Api (No-Auth)\\Program.cs",
               "RelativeDocumentMoniker": "GitHub-Intermediary-Api (No-Auth)\\Program.cs",
@@ -43,8 +47,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-12T02:23:51.462Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -54,15 +57,19 @@
               "RelativeDocumentMoniker": "GitHub-Intermediary-Api (No-Auth)\\Controllers\\GitHubController.cs",
               "ToolTip": "D:\\Development\\_Technical Assessments\\GitHub-Intermediary-Api (No-Auth)\\GitHub-Intermediary-Api (No-Auth)\\Controllers\\GitHubController.cs",
               "RelativeToolTip": "GitHub-Intermediary-Api (No-Auth)\\Controllers\\GitHubController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-12T02:21:50.288Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\Development\\_Technical Assessments\\GitHub-Intermediary-Api (No-Auth)\\GitHub-Intermediary-Api (No-Auth)\\Models\\User.cs",
               "RelativeDocumentMoniker": "GitHub-Intermediary-Api (No-Auth)\\Models\\User.cs",
@@ -70,33 +77,45 @@
               "RelativeToolTip": "GitHub-Intermediary-Api (No-Auth)\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T02:23:44.992Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T02:23:44.992Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "ApiConnector.cs",
               "DocumentMoniker": "D:\\Development\\_Technical Assessments\\GitHub-Intermediary-Api (No-Auth)\\GitHub-Intermediary-Api (No-Auth)\\Framework\\ApiConnector.cs",
               "RelativeDocumentMoniker": "GitHub-Intermediary-Api (No-Auth)\\Framework\\ApiConnector.cs",
               "ToolTip": "D:\\Development\\_Technical Assessments\\GitHub-Intermediary-Api (No-Auth)\\GitHub-Intermediary-Api (No-Auth)\\Framework\\ApiConnector.cs",
               "RelativeToolTip": "GitHub-Intermediary-Api (No-Auth)\\Framework\\ApiConnector.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-12T02:45:50.29Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GitHubControllerTest.cs",
-              "DocumentMoniker": "D:\\Development\\_Technical Assessments\\GitHub-Intermediary-Api (No-Auth)\\GitHub-Intermediary-Api (No-Auth) xTest\\GitHubControllerTest.cs",
-              "RelativeDocumentMoniker": "GitHub-Intermediary-Api (No-Auth) xTest\\GitHubControllerTest.cs",
-              "ToolTip": "D:\\Development\\_Technical Assessments\\GitHub-Intermediary-Api (No-Auth)\\GitHub-Intermediary-Api (No-Auth) xTest\\GitHubControllerTest.cs",
-              "RelativeToolTip": "GitHub-Intermediary-Api (No-Auth) xTest\\GitHubControllerTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAlAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Validation.cs",
+              "DocumentMoniker": "D:\\Development\\_Technical Assessments\\GitHub-Intermediary-Api (No-Auth)\\GitHub-Intermediary-Api (No-Auth)\\Framework\\Validation.cs",
+              "RelativeDocumentMoniker": "GitHub-Intermediary-Api (No-Auth)\\Framework\\Validation.cs",
+              "ToolTip": "D:\\Development\\_Technical Assessments\\GitHub-Intermediary-Api (No-Auth)\\GitHub-Intermediary-Api (No-Auth)\\Framework\\Validation.cs",
+              "RelativeToolTip": "GitHub-Intermediary-Api (No-Auth)\\Framework\\Validation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T04:59:04.942Z",
+              "WhenOpened": "2024-12-12T22:18:20.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Converter.cs",
+              "DocumentMoniker": "D:\\Development\\_Technical Assessments\\GitHub-Intermediary-Api (No-Auth)\\GitHub-Intermediary-Api (No-Auth)\\Framework\\Converter.cs",
+              "RelativeDocumentMoniker": "GitHub-Intermediary-Api (No-Auth)\\Framework\\Converter.cs",
+              "ToolTip": "D:\\Development\\_Technical Assessments\\GitHub-Intermediary-Api (No-Auth)\\GitHub-Intermediary-Api (No-Auth)\\Framework\\Converter.cs",
+              "RelativeToolTip": "GitHub-Intermediary-Api (No-Auth)\\Framework\\Converter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T22:18:53.474Z",
               "EditorCaption": ""
             }
           ]

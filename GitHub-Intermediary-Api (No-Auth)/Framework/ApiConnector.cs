@@ -9,8 +9,7 @@ namespace GitHub_Intermediary_Api.Framework {
                     client.DefaultRequestHeaders.Accept.Clear();
                     client.DefaultRequestHeaders.Add("Accept", "application/vnd.github+json");
                     client.DefaultRequestHeaders.Add("X-GitHub-Api-Version", "2022-11-28");
-                    client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", "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");
-                    client.DefaultRequestHeaders.UserAgent.TryParseAdd("Connect");
+                    client.DefaultRequestHeaders.Add("User-Agent", "CSharp-App");
 
                     HttpResponseMessage response = await client.GetAsync($"https://api.github.com/users/{username}");
                     if (response.IsSuccessStatusCode) {

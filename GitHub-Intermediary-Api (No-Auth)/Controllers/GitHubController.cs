@@ -18,14 +18,12 @@ namespace GitHub_Intermediary_Api.Controllers {
         [HttpGet("RetrieveUsersXml")]
         public string RetrieveUsersXml([FromQuery] List<string> usernames) {
             ApiUserResponse apiUserResponse = RetrieveUsers(usernames);
-            XmlSerializer xmlSerializer = new(apiUserResponse.GetType());
-            using StringWriter stringWriter = new();
-            xmlSerializer.Serialize(stringWriter, apiUserResponse);
-            return stringWriter.ToString();
+            string xmlString = new Converter().ConvertToXml(apiUserResponse, "ApiUserResponse");
+            return xmlString;
         }
 
         private static ApiUserResponse RetrieveUsers(List<string> usernames) {
-            usernames = ValidateUsernames(usernames, out Dictionary<string, string> errors);
+            usernames = new Validation().ValidateUsernames(usernames, out Dictionary<string, string> errors);
             List<User> users = [];
             foreach (string username in usernames) {
                 User? user = new ApiConnector().RetrieveUsersAsync(username).Result;
@@ -37,18 +35,6 @@ namespace GitHub_Intermediary_Api.Controllers {
                 Errors = errors.Select(e => new Error { Username = e.Key, Message = e.Value }).ToList()
             };
             return apiUserResponse;
-        }
-
-        private static List<string> ValidateUsernames(List<string> usernames, out Dictionary<string, string> errors) {
-            List<string> validUsernames = []; errors = [];
-            Regex regex = new(@"^[a-zA-Z0-9-]+$");
-            foreach (string username in usernames) {
-                if (regex.IsMatch(username)) {
-                    if (!validUsernames.Contains(username)) validUsernames.Add(username);
-                    else errors.Add(username, "Duplicate username found.");
-                } else errors.Add(username, "Username is not in valid alphanumeric and hypen format.");
-            }
-            return validUsernames;
         }
     }
 }
