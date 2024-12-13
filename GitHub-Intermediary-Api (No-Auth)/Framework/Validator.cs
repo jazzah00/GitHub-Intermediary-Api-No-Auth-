@@ -7,9 +7,9 @@ namespace GitHub_Intermediary_Api.Framework {
             Regex regex = new(@"^[a-zA-Z0-9-]+$");
             foreach (string username in usernames) {
                 if (regex.IsMatch(username)) {
-                    if (!validUsernames.Contains(username)) validUsernames.Add(username);
-                    else errors.TryAdd(username, "Duplicate username found.");
-                } else errors.TryAdd(username, "Username is not in valid alphanumeric and hypen format.");
+                    if (!validUsernames.Contains(username.ToLower())) validUsernames.Add(username.ToLower());
+                    else errors.TryAdd(username.ToLower(), "Duplicate username found.");
+                } else errors.TryAdd(username.ToLower(), "Username is not in valid alphanumeric and hypen format.");
             }
             return validUsernames;
         }
