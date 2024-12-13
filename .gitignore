@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/GitHub-Intermediary-Api (No-Auth)/obj/Release/net8.0/GitHub-Intermediary-Api (No-Auth).AssemblyInfo.cs
+/GitHub-Intermediary-Api (No-Auth) xTest/obj/Release/net8.0/GitHub-Intermediary-Api (No-Auth) xTest.AssemblyInfo.cs
