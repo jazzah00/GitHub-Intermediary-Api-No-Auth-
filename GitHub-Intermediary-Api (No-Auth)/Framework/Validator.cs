@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 
 namespace GitHub_Intermediary_Api.Framework {
-    public class Validation() {
+    public class Validator() {
         public List<string> ValidateUsernames(List<string> usernames, out Dictionary<string, string> errors) {
             List<string> validUsernames = []; errors = [];
             Regex regex = new(@"^[a-zA-Z0-9-]+$");

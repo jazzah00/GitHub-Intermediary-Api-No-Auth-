@@ -21,7 +21,7 @@ namespace GitHub_Intermediary_Api.Controllers {
         }
 
         private static ApiUserResponse RetrieveUsers(List<string> usernames) {
-            usernames = new Validation().ValidateUsernames(usernames, out Dictionary<string, string> errors);
+            usernames = new Validator().ValidateUsernames(usernames, out Dictionary<string, string> errors);
             List<User> users = [];
             foreach (string username in usernames) {
                 User? user = new ApiConnector().RetrieveUsersAsync(username).Result;
