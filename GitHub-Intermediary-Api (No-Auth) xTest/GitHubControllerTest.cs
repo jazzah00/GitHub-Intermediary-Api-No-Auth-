@@ -1,69 +1,95 @@
 using GitHub_Intermediary_Api.Controllers;
+using GitHub_Intermediary_Api.Interfaces;
 using GitHub_Intermediary_Api.Models;
+using Microsoft.AspNetCore.Mvc;
+using Moq;
 using Newtonsoft.Json;
-using System.Xml.Serialization;
 
 namespace GitHub_Intermediary_Api_xTest {
     public class GitHubControllerTest {
-        [Fact]
-        public void RetrieveUsers_Valid_Xml() {
-            List<string> usernames = ["Jazzah00", "Octacat"];
-            string result = new GitHubController().RetrieveUsersXml(usernames);
-            Assert.NotNull(result);
+        private readonly Mock<IGitHubService> _MockGitHubService;
+        private readonly Mock<IConverter> _MockConverter;
+        private readonly GitHubController _GitHubController;
 
-            if (!string.IsNullOrEmpty(result)) {
-                using (StringReader reader = new(result)) {
-                    XmlSerializer xmlSerializer = new(typeof(ApiUserResponse));
-                    ApiUserResponse response = (ApiUserResponse)xmlSerializer.Deserialize(reader);
-
-                    Assert.NotNull(response);
-                    Assert.Equal(2, response.Users.Count);
-                }
-            }
+        public GitHubControllerTest() {
+            _MockGitHubService = new Mock<IGitHubService>();
+            _MockConverter = new Mock<IConverter>();
+            _GitHubController = new GitHubController(_MockGitHubService.Object, _MockConverter.Object);
         }
 
         [Fact]
-        public void RetrieveUsers_Valid_Json() {
-            List<string> usernames = ["Jazzah00", "Octacat"];
-            string result = new GitHubController().RetrieveUsersJson(usernames);
-            Assert.NotNull(result);
+        public async Task RetrieveUsersJson_ReturnsOkResult_WithSerializedJson() {
+            List<string> usernames = ["arrow", "spartan"];
+            ApiUserResponse apiUserResponse = new() {
+                Users = [
+                    new User {
+                        Name = "John Diggle",
+                        Login = "spartan",
+                        Company = "US Army",
+                        Followers = 170,
+                        Public_Repos = 8 },
+                    new User {
+                        Name = "Oliver Queen",
+                        Login = "arrow",
+                        Company = "Queen Industries",
+                        Followers = 170,
+                        Public_Repos = 8
+                    },
+                    new User {
+                        Name = "Felicity Smoak",
+                        Login = "Overwatch",
+                        Company = "",
+                        Followers = 160,
+                        Public_Repos = 8
+                    }
+                ],
+                Errors = []
+            };
+            string jsonString = JsonConvert.SerializeObject(apiUserResponse);
+            _MockGitHubService.Setup(gh => gh.RetrieveUsersAsync(usernames)).ReturnsAsync(apiUserResponse);
 
-            if (!string.IsNullOrEmpty(result)) {
-                ApiUserResponse response = JsonConvert.DeserializeObject<ApiUserResponse>(result);
-                Assert.NotNull(response);
-                Assert.Equal(2, response.Users.Count);
-            }
+            IActionResult? result = await _GitHubController.RetrieveUsersJson(usernames);
+
+            OkObjectResult okObjectResult = Assert.IsType<OkObjectResult>(result);
+            Assert.Equal(jsonString, okObjectResult.Value);
         }
 
         [Fact]
-        public void RetrieveUsers_Valid_With_Duplicate() {
-            List<string> usernames = ["Jazzah00", "Jazzah00", "Octadog"];
-            string result = new GitHubController().RetrieveUsersJson(usernames);
-            Assert.NotNull(result);
+        public async Task RetrieveUsersJson_ReturnsOkResult_WithSerializedXml() {
+            List<string> usernames = ["arrow", "spartan"];
+            ApiUserResponse apiUserResponse = new() {
+                Users = [
+                    new User {
+                        Name = "Felicity Smoak",
+                        Login = "Overwatch",
+                        Company = "",
+                        Followers = 160,
+                        Public_Repos = 8
+                    },
+                    new User {
+                        Name = "John Diggle",
+                        Login = "Spartan",
+                        Company = "US Army",
+                        Followers = 170,
+                        Public_Repos = 8 },
+                    new User {
+                        Name = "Oliver Queen",
+                        Login = "Arrow",
+                        Company = "Queen Industries",
+                        Followers = 170,
+                        Public_Repos = 8
+                    }
+                ],
+                Errors = []
+            };
+            string xmlResponse = "<ApiUserResponse><Users><User><Name>Felicity Smoak</Name><Login>Overwatch</Login><Company></Company><Followers>160</Followers><Public_Repos>8</Public_Repos><Average_Followers_Per_Repository>20</Average_Followers_Per_Repository></User><User><Name>John Diggle</Name><Login>Spartan</Login><Company>US Army</Company><Followers>170</Followers><Public_Repos>8</Public_Repos><Average_Followers_Per_Repository>23</Average_Followers_Per_Repository></User><User><Name>Oliver Queen</Name><Login>Arrow</Login><Company>Queen Industries</Company><Followers>170</Followers><Public_Repos>8</Public_Repos><Average_Followers_Per_Repository>23</Average_Followers_Per_Repository></User></Users><Errors></Errors></ApiUserResponse>";
+            _MockGitHubService.Setup(gh => gh.RetrieveUsersAsync(usernames)).ReturnsAsync(apiUserResponse);
+            _MockConverter.Setup(c => c.ConvertToXml(apiUserResponse, "ApiUserResponse")).Returns(xmlResponse);
 
-            if (!string.IsNullOrEmpty(result)) {
-                ApiUserResponse response = JsonConvert.DeserializeObject<ApiUserResponse>(result);
-                Assert.NotNull(response);
-                Assert.Equal(2, response.Users.Count);
-                Assert.Single(response.Errors);
-            }
-        }
+            IActionResult? result = await _GitHubController.RetrieveUsersXml(usernames);
 
-        [Fact]
-        public void RetrieveUsers_Empty_With_Errors() {
-            List<string> usernames = ["Jazzah 00", "petepenguin"];
-            string result = new GitHubController().RetrieveUsersJson(usernames);
-            Assert.NotNull(result);
-
-            if (!string.IsNullOrEmpty(result)) {
-                ApiUserResponse response = JsonConvert.DeserializeObject<ApiUserResponse>(result);
-                Assert.NotNull(response);
-                Assert.Empty(response.Users);
-
-                Assert.Equal(2, response.Errors.Count);
-                Assert.Single(response.Errors.Where(e => e.Message.Equals("Username is not in valid alphanumeric and hypen format.")).ToList());
-                Assert.Single(response.Errors.Where(e => e.Message.Equals("User not found.")).ToList());
-            }
+            OkObjectResult okObjectResult = Assert.IsType<OkObjectResult>(result);
+            Assert.Equal(xmlResponse, okObjectResult.Value);
         }
     }
 }

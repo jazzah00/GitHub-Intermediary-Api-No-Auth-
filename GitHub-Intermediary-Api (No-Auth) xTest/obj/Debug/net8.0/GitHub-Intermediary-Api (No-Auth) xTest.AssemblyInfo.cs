@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GitHub-Intermediary-Api (No-Auth) xTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88dde4e5d229d9d64c9217ac720f2d2307b91b36")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e21d9a25f8243fd4f09e04d1e1a54aafb07cd162")]
 [assembly: System.Reflection.AssemblyProductAttribute("GitHub-Intermediary-Api (No-Auth) xTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GitHub-Intermediary-Api (No-Auth) xTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

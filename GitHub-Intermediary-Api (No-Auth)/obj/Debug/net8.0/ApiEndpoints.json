@@ -2,7 +2,7 @@
   {
     "ContainingType": "GitHub_Intermediary_Api.Controllers.GitHubController",
     "Method": "RetrieveUsersJson",
-    "RelativePath": "GitHub/RetrieveUsers",
+    "RelativePath": "GitHub/RetrieveUsersJson",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -13,17 +13,7 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "GitHub_Intermediary_Api.Controllers.GitHubController",
@@ -39,16 +29,6 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   }
 ]
